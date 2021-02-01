@@ -1,6 +1,6 @@
 {
-  "name": "vue-tree-list",
-  "version": "1.5.0",
+  "name": "vue-tree-list-new",
+  "version": "1.6.1",
   "description": "A vue component for tree structure. Support adding treenode/leafnode, editing node's name and dragging.",
   "author": "ayou",
   "scripts": {
@@ -48,9 +48,9 @@
     "last 2 versions"
   ],
   "bugs": {
-    "url": "https://github.com/ParadeTo/vue-tree-list/issues"
+    "url": "https://github.com/vunguyen105/vue-tree-list/issues"
   },
-  "homepage": "https://github.com/ParadeTo/vue-tree-list#readme",
+  "homepage": "https://github.com/vunguyen105/vue-tree-list#readme",
   "keywords": [
     "vue",
     "tree"
@@ -58,6 +58,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ParadeTo/vue-tree-list.git"
+    "url": "git+https://github.com/vunguyen105/vue-tree-list.git"
+  },
+  "directories": {
+    "example": "examples",
+    "test": "tests"
   }
 }

@@ -47,7 +47,8 @@
             {{ model.name }}
           </slot>
         </div>
-        <input v-else
+        <input
+               v-else
                class="vtl-input"
                type="text"
                ref="nodeInput"
@@ -84,9 +85,9 @@
               <i class="vtl-icon vtl-icon-trash"></i>
             </slot>
           </span>
-          <span title="edit" @click.stop.prevent="editNode" v-if="model.isLeaf">
-            <slot name="delNodeIcon" :expanded="expanded" :model="model" :root="rootNode">
-              <i class="fa fa-pencil"></i>
+          <span title="edit" @click.stop.prevent="editLeaf" v-if="model.isLeaf">
+            <slot name="editLeaf" :expanded="expanded" :model="model" :root="rootNode">
+              <i class="vtl-icon vtl-icon-edit"></i>
             </slot>
           </span>
         </div>
@@ -247,8 +248,8 @@ export default {
       this.rootNode.$emit('delete-node', this.model)
     },
 
-    editNode() {
-      this.rootNode.$emit('edit-node', this.model)
+    editLeaf() {
+      this.rootNode.$emit('edit-leaf', this.model)
     },
 
     setEditable() {

@@ -5,6 +5,7 @@
       @click="onClick"
       @change-name="onChangeName"
       @delete-node="onDel"
+      @edit-leaf="editLeaf"
       @add-node="onAddNode"
       @drop="drop"
       @drop-before="dropBefore"
@@ -109,6 +110,10 @@ export default {
       console.log(params)
     },
 
+    editLeaf(params) {
+      console.log(params)
+    },
+    
     onClick(params) {
       // eslint-disable-next-line no-console
       console.log(params)
