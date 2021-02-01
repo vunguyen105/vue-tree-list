@@ -47,14 +47,13 @@
             {{ model.name }}
           </slot>
         </div>
-        <input
-          v-else
-          class="vtl-input"
-          type="text"
-          ref="nodeInput"
-          :value="model.name"
-          @input="updateName"
-          @blur="setUnEditable"
+        <input v-else
+               class="vtl-input"
+               type="text"
+               ref="nodeInput"
+               :value="model.name"
+               @input="updateName"
+               @blur="setUnEditable"
         />
         <div class="vtl-operation" v-show="isHover">
           <span
@@ -83,6 +82,11 @@
           <span title="delete" @click.stop.prevent="delNode" v-if="!model.delNodeDisabled">
             <slot name="delNodeIcon" :expanded="expanded" :model="model" :root="rootNode">
               <i class="vtl-icon vtl-icon-trash"></i>
+            </slot>
+          </span>
+          <span title="edit" @click.stop.prevent="editNode" v-if="model.isLeaf">
+            <slot name="delNodeIcon" :expanded="expanded" :model="model" :root="rootNode">
+              <i class="fa fa-pencil"></i>
             </slot>
           </span>
         </div>
@@ -241,6 +245,10 @@ export default {
 
     delNode() {
       this.rootNode.$emit('delete-node', this.model)
+    },
+
+    editNode() {
+      this.rootNode.$emit('edit-node', this.model)
     },
 
     setEditable() {

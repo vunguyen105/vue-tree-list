@@ -11,15 +11,16 @@ import { traverseTree } from './tools'
  */
 export class TreeNode {
   constructor(data) {
-    const { id, isLeaf } = data
+    const { id, isLeaf, type } = data
     this.id = typeof id === 'undefined' ? new Date().valueOf() : id
     this.parent = null
     this.children = null
+    this.type = type
     this.isLeaf = !!isLeaf
 
     // other params
     for (var k in data) {
-      if (k !== 'id' && k !== 'children' && k !== 'isLeaf') {
+      if (k !== 'id' && k !== 'children' && k !== 'isLeaf' && k !== 'type') {
         this[k] = data[k]
       }
     }
