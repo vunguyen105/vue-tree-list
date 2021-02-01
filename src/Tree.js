@@ -20,7 +20,7 @@ export class TreeNode {
 
     // other params
     for (var k in data) {
-      if (k !== 'id' && k !== 'children' && k !== 'isLeaf' && k !== 'type') {
+      if (k !== 'id' && k !== 'children' && k !== 'isLeaf') {
         this[k] = data[k]
       }
     }

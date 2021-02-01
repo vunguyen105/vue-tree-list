@@ -303,6 +303,7 @@ export default {
       const name = isLeaf ? this.defaultLeafNodeName : this.defaultTreeNodeName
       this.expanded = true
       var node = new TreeNode({ name, isLeaf })
+      node.type = 0
       this.model.addChildren(node, true)
       this.rootNode.$emit('add-node', node)
     },
