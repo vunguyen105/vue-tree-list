@@ -46,6 +46,9 @@
           <slot name="leafNameDisplay" :expanded="expanded" :model="model" :root="rootNode">
             {{ model.name }}
           </slot>
+          <slot v-if="typeof model.type !== 'undefined'">
+            {{ getType(model.type) }}
+          </slot>
         </div>
         <input
                v-else
@@ -158,7 +161,8 @@ export default {
       isDragEnterUp: false,
       isDragEnterBottom: false,
       isDragEnterNode: false,
-      expanded: this.defaultExpanded
+      expanded: this.defaultExpanded,
+      types: ['checkbox', 'radio', 'input']
     }
   },
   props: {
@@ -387,6 +391,9 @@ export default {
         node: compInOperation.model,
         src: oldParent
       })
+    },
+    getType(type) {
+      return this.types[type];
     }
   }
 }

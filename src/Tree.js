@@ -15,7 +15,7 @@ export class TreeNode {
     this.id = typeof id === 'undefined' ? new Date().valueOf() : id
     this.parent = null
     this.children = null
-    this.type = type
+    this.type = typeof type === 'undefined' ? 0 : 1
     this.isLeaf = !!isLeaf
 
     // other params
@@ -28,6 +28,10 @@ export class TreeNode {
 
   changeName(name) {
     this.name = name
+  }
+
+  changeType(type) {
+    this.type = type
   }
 
   addChildren(children) {

@@ -14,7 +14,7 @@ Install the plugin then you can use the component globally.
 
 ```js
 import Vue from 'vue'
-import VueTreeList from 'vue-tree-list'
+import VueTreeList from 'vue-tree-list-new'
 
 Vue.use(VueTreeList)
 ```
@@ -23,7 +23,7 @@ Or just register locally like the example below.
 
 # use
 
-`npm install vue-tree-list`
+`npm install vue-tree-list-new`
 
 ```html
 <template>
@@ -59,7 +59,7 @@ Or just register locally like the example below.
 </template>
 
 <script>
-  import { VueTreeList, Tree, TreeNode } from 'vue-tree-list'
+  import { VueTreeList, Tree, TreeNode } from 'vue-tree-list-new'
   export default {
     components: {
       VueTreeList

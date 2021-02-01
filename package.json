@@ -1,6 +1,6 @@
 {
   "name": "vue-tree-list-new",
-  "version": "1.6.3",
+  "version": "1.6.5",
   "description": "A vue component for tree structure. Support adding treenode/leafnode, editing node's name and dragging.",
   "author": "ayou",
   "scripts": {
@@ -13,7 +13,7 @@
     "commit": "git-cz",
     "prepublish": "npm run build"
   },
-  "main": "dist/vue-tree-list.umd.min.js",
+  "main": "dist/vue-tree-list-new.umd.min.js",
   "dependencies": {},
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
