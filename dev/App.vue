@@ -113,7 +113,7 @@ export default {
     editLeaf(params) {
       console.log(params)
     },
-    
+
     onClick(params) {
       // eslint-disable-next-line no-console
       console.log(params)
